@@ -1,4 +1,4 @@
-# 🧠 SuKoon-AI — Mental Health Assistant
+# 🧠 SuKoon-AI — Mental Health Therapist
 
 SuKoon-AI is an AI-powered mental health assistant. It uses a **LangChain ReAct agent** (Gemini LLM) with tools for:
 
@@ -144,3 +144,4 @@ Response:
 
 * The **Emergency Call** tool requires valid Twilio credentials.
 * Treat this as a **supportive assistant**, not a medical device. In emergencies, contact local services immediately.
+
