@@ -20,11 +20,12 @@ if user_input:
                                           "content": user_input})
     response = requests.post(
         BACKEND_URL, json={"message": user_input}
-    ).json()  # Assuming the backend returns a JSON response with the answer
-    #response = "I'm here to help you please ask me any query."
+    ).json()  
+
     st.session_state.chat_history.append({"role": "assistant", 
                                           "content": f"{response['message']}\n, Tool called: {response['tool_called']}"})
     
+
 # Step3: Show response from backend
 
 for msg in st.session_state.chat_history:
@@ -32,4 +33,6 @@ for msg in st.session_state.chat_history:
         st.write(f"**User:** {msg['content']}")
     else:
         st.write(f"**Assistant:** {msg['content']}")
+    
+    
     
