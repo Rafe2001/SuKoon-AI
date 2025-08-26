@@ -1,8 +1,9 @@
 import sys
 from groq import Groq
 import os
-
 sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+# from prompts import system_prompt_tool
+
 from dotenv import load_dotenv
 load_dotenv()
 
@@ -28,5 +29,3 @@ def ask_llm(prompt: str, system_prompt: str)-> str:
     )
     return chat_completion.choices[0].message.content
 
-
-# print(ask_llm("What's your name?", system_prompt))
